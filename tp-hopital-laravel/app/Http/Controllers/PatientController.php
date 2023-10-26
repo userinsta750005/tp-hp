@@ -7,27 +7,26 @@ use App\Http\Models\Patient;
 
 class PatientController extends Controller
 {
-    public function createPatient(){
-        $validatedData = $request->validate([
+    public function createPatient(Request $request){
+        $this->validate($request, [
             'nom' => 'required|string',
             'prenom' => 'required|string',
             'date_de_naissance' => 'required|date',
-            'adresse' => 'required|sting',
+            'adresse' => 'required|string',
             'tel' => 'required|integer',
             'ailment' => 'required|string',
             'age' => 'required|integer',
         ]);
-        
-        Patient::create($validatedData);
 
-        // $patient = new Patient;
-        // $patient->nom = $validatedData['nom'];
-        // $patient->prenom = $validatedData['prenom'];
-        // $patient->date_de_naissance = $validatedData['date_de_naissance'];
-        // $patient->adresse = $validatedData['adresse'];
-        // $patient->tel = $validatedData['tel'];
-        // $patient->ailment = $validatedData['ailment'];
-        // $patient->save(); 
+        $patient = new Patient();
+        $patient->nom = $request->nom;
+        $patient->prenom = $request->prenom;
+        $patient->date_de_naissance = $request->date_de_naissance;
+        $patient->adresse = $request->adresse;
+        $patient->tel = $request->tel;
+        $patient->ailment = $request->ailment;
+        $patient->age = $request->age;
+        $patient->save(); 
 
         // return redirect()->route('page-de-confirmation');
     }

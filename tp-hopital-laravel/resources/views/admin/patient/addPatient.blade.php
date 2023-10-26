@@ -530,7 +530,7 @@
                                     <div class="card-body">
                                         <h4 class="header-title">Fill all fields</h4>
                                         <!--Add Patient Form-->
-                                        <form method="post" action="/patient/add">
+                                        <form method="post" action="{{url('/patient/add')}}">
                                             <div class="form-row">
                                                 <div class="form-group col-md-6">
                                                     <label for="inputEmail4" class="col-form-label">First Name</label>
