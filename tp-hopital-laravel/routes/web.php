@@ -25,7 +25,7 @@ Route::get('/', function () {
 Route::get('/loginAdmin', [AdminPagesController::class, 'loginAdmin'])->name('loginAdmin');
 Route::get('/dashboardAdmin', [AdminPagesController::class, 'dashboardAdmin'])->middleware('auth');
 Route::get('/logoutAdmin', [AdminPagesController::class, 'logout']);
-Route::post('/authenticate', [AdminPagesController::class, 'authenticate']);
+Route::post('/admin/authenticate', [AdminPagesController::class, 'authenticate']);
 
 Route::get('/patient/patientAddAdmin', [AdminPagesController::class, 'patientAdd']);
 
@@ -33,7 +33,7 @@ Route::get('/patient/patientAddAdmin', [AdminPagesController::class, 'patientAdd
 Route::get('/loginDocteur', [DoctorPagesController::class, 'loginDocteur'])->name('loginDocteur');
 Route::get('/dashboardDocteur', [DoctorPagesController::class, 'dashboardDocteur'])->middleware('auth');
 Route::get('/logoutDocteur', [DoctorPagesController::class, 'logout']);
-Route::post('/authenticate', [DoctorPagesController::class, 'authenticate']);
+Route::post('/doctor/authenticate', [DoctorPagesController::class, 'authenticate']);
 
 
 // Route::get('/dashboard', function () {

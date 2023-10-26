@@ -40,7 +40,7 @@
                                     <p class="text-muted mb-4 mt-3">Enter your email address and password to access admin panel.</p>
                                 </div>
 
-                                <form method='post' action="{{url('/authenticate')}}">
+                                <form method='post' action="{{url('/admin/authenticate')}}">
                                     {{ csrf_field() }}
 
                                     <div class="form-group mb-3">
