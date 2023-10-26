@@ -34,6 +34,7 @@ public function __construct()
     }
     
 
+    //fonction connexion page admin
     public function authenticate(Request $request)
     {
         request()->validate([
