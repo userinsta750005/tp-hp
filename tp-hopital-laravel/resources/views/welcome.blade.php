@@ -39,7 +39,7 @@
                 <nav id="nav-menu-container">
                     <ul class="nav-menu">
                         <li class="menu-active"><a href="{{ URL::to('/') }}">Dashboard</a></li>
-                        <li><a href="backend/doc/index.php">Doctor's Login</a></li>
+                        <li><a href="{{ URL::to('/loginDocteur') }}">Doctor's Login</a></li>
                         <li><a href="{{ URL::to('/loginAdmin') }}">Administrator Login</a></li>
                     </ul>
                 </nav><!-- #nav-menu-container -->		    		

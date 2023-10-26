@@ -9,24 +9,15 @@ use Illuminate\Support\Facades\Hash;
 
 class DoctorPagesController extends Controller
 {
-    public function __construct()
-{
-    $this->middleware(function ($request, $next) {
-        if (!Auth::check()) {
-            return redirect()->route('loginAdmin');
-        }
-        return $next($request);
-    }, ['only' => ['dashboardAdmin']]);
-}
-    public function loginAdmin(){
-        return view('admin.login');
+    public function loginDocteur(){
+        return view('docteur.login');
     }
 
-    public function dashboardAdmin(){
+    public function dashboardDocteur(){
         if (!Auth::check()) {
-            return redirect('/loginAdmin');
+            return redirect('/loginDocteur');
         }
-        return view('admin.dashboard');
+        return view('docteur.dashboard');
     }
     
 
@@ -40,16 +31,16 @@ class DoctorPagesController extends Controller
         $user = User::where('email', $request->email)->first();
     
         if ($user && $request->password == $user->password) {
-            if ($user->statut == 1){
+            if ($user->statut == 0){
                 Auth::login($user);
-                return redirect('/dashboardAdmin');
+                return redirect('/dashboardDocteur');
             } else {
-            return redirect('/loginAdmin')->with('error', 'Identifiants incorrects');
+            return redirect('/loginDocteur')->with('error', 'Identifiants incorrects');
         }
     }
  }
     public function logout() {
         Auth::logout();
-        return redirect('/loginAdmin');
+        return redirect('/loginDocteur');
     }
 }

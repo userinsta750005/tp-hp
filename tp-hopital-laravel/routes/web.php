@@ -4,6 +4,8 @@ use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\AdminPagesController;
 use Illuminate\Support\Facades\Route;
 
+use App\Http\Controllers\DoctorPagesController;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -20,12 +22,16 @@ Route::get('/', function () {
 });
 
 Route::get('/loginAdmin', [AdminPagesController::class, 'loginAdmin'])->name('loginAdmin');
-
 Route::get('/dashboardAdmin', [AdminPagesController::class, 'dashboardAdmin'])->middleware('auth');
-
 Route::get('/logoutAdmin', [AdminPagesController::class, 'logout']);
-
 Route::post('/authenticate', [AdminPagesController::class, 'authenticate']);
+
+
+
+Route::get('/loginDocteur', [DoctorPagesController::class, 'loginDocteur'])->name('loginDocteur');
+Route::get('/dashboardDocteur', [DoctorPagesController::class, 'dashboardDocteur'])->middleware('auth');
+Route::get('/logoutDocteur', [DoctorPagesController::class, 'logout']);
+Route::post('/authenticate', [DoctorPagesController::class, 'authenticate']);
 
 
 // Route::get('/dashboard', function () {

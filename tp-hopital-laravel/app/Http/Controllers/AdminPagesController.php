@@ -12,16 +12,6 @@ use Illuminate\Support\Facades\Hash;
 class AdminPagesController extends Controller
 {
 
-
-public function __construct()
-{
-    $this->middleware(function ($request, $next) {
-        if (!Auth::check()) {
-            return redirect()->route('loginAdmin');
-        }
-        return $next($request);
-    }, ['only' => ['dashboardAdmin']]);
-}
     public function loginAdmin(){
         return view('admin.login');
     }
@@ -51,6 +41,8 @@ public function __construct()
             } else {
             return redirect('/loginAdmin')->with('error', 'Identifiants incorrects');
         }
+    }else{
+        return redirect('/loginAdmin')->with('error', 'Identifiants incorrects');
     }
  }
     public function logout() {
