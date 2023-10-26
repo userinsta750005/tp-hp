@@ -183,7 +183,7 @@
                                 </a>
                                 <ul class="nav-second-level" aria-expanded="false">
                                     <li>
-                                        <a href="registerpatient.html">Register Patient</a>
+                                        <a href="{{ URL::to('/patient/patientAddAdmin') }}">Register Patient</a>
                                     </li>
                                     <li>
                                         <a href="viewpatients.html">View Patients</a>

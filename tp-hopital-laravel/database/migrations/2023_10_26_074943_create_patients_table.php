@@ -15,8 +15,10 @@ return new class extends Migration
             $table->id();
             $table->string('nom');
             $table->string('prenom');
+            $table->date('date_de_naissance');
             $table->string('adresse');
             $table->integer('tel');
+            $table->string('Ailment');
             $table->timestamps();
         });
     }

@@ -21,13 +21,15 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+//Admin
 Route::get('/loginAdmin', [AdminPagesController::class, 'loginAdmin'])->name('loginAdmin');
 Route::get('/dashboardAdmin', [AdminPagesController::class, 'dashboardAdmin'])->middleware('auth');
 Route::get('/logoutAdmin', [AdminPagesController::class, 'logout']);
 Route::post('/authenticate', [AdminPagesController::class, 'authenticate']);
 
+Route::get('/patient/patientAddAdmin', [AdminPagesController::class, 'patientAdd']);
 
-
+//Doctor
 Route::get('/loginDocteur', [DoctorPagesController::class, 'loginDocteur'])->name('loginDocteur');
 Route::get('/dashboardDocteur', [DoctorPagesController::class, 'dashboardDocteur'])->middleware('auth');
 Route::get('/logoutDocteur', [DoctorPagesController::class, 'logout']);

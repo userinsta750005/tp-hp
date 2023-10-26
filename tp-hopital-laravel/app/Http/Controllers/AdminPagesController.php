@@ -23,6 +23,9 @@ class AdminPagesController extends Controller
         return view('admin.dashboard');
     }
     
+    public function patientAdd(){
+        return view('admin.patient.addPatient');
+    }
 
     //fonction connexion page admin
     public function authenticate(Request $request)
