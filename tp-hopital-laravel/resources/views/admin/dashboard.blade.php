@@ -10,23 +10,23 @@
         <meta content="MartDevelopers" name="author" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <!-- App favicon -->
-        <link rel="shortcut icon" href="{{asset('docteur/assets/images/favicon.ico')}}">
+        <link rel="shortcut icon" href="{{asset('admin/assets/images/favicon.ico')}}">
 
         <!-- Plugins css -->
-        <link href="{{asset('docteur/assets/libs/flatpickr/flatpickr.min.css')}}" rel="stylesheet" type="text/css" />
+        <link href="{{asset('admin/assets/libs/flatpickr/flatpickr.min.css')}}" rel="stylesheet" type="text/css" />
 
         <!-- App css -->
-        <link href="{{asset('docteur/assets/css/bootstrap.min.css')}}" rel="stylesheet" type="text/css" />
-        <link href="{{asset('docteur/assets/css/icons.min.css')}}" rel="stylesheet" type="text/css" />
-        <link href="{{asset('docteur/assets/css/app.min.css')}}" rel="stylesheet" type="text/css" />
+        <link href="{{asset('admin/assets/css/bootstrap.min.css')}}" rel="stylesheet" type="text/css" />
+        <link href="{{asset('admin/assets/css/icons.min.css')}}" rel="stylesheet" type="text/css" />
+        <link href="{{asset('admin/assets/css/app.min.css')}}" rel="stylesheet" type="text/css" />
          <!-- Loading button css -->
-         <link href="{{asset('docteur/assets/libs/ladda/ladda-themeless.min.css')}}" rel="stylesheet" type="text/css" />
+         <link href="{{asset('admin/assets/libs/ladda/ladda-themeless.min.css')}}" rel="stylesheet" type="text/css" />
 
         <!-- Footable css -->
-        <link href="{{asset('docteur/assets/libs/footable/footable.core.min.css')}}" rel="stylesheet" type="text/css" />
+        <link href="{{asset('admin/assets/libs/footable/footable.core.min.css')}}" rel="stylesheet" type="text/css" />
 
        <!--Load Sweet Alert Javascript-->
-       <script src="{{asset('docteur/assets/js/swal.js')}}"></script>
+       <script src="{{asset('admin/assets/js/swal.js')}}"></script>
        
         <!--Inject SWAL-->
         
@@ -59,7 +59,7 @@
             
             <li class="dropdown notification-list">
                 <a class="nav-link dropdown-toggle nav-user mr-0 waves-effect waves-light" data-toggle="dropdown" href="#" role="button" aria-haspopup="false" aria-expanded="false">
-                    <img src="{{asset('docteur/assets/images/users/doc-icon.png')}}" alt="dpic" class="rounded-circle">
+                    <img src="{{asset('admin/assets/images/users/doc-icon.png')}}" alt="dpic" class="rounded-circle">
                     <span class="pro-user-name ml-1">
                         System Administrator <i class="mdi mdi-chevron-down"></i> 
                     </span>
@@ -79,10 +79,10 @@
         <div class="logo-box">
             <a href="dashboard.html" class="logo text-center">
                 <span class="logo-lg">
-                    <img src="{{asset('docteur/assets/images/logo-light.png')}}" alt="" height="18">
+                    <img src="{{asset('admin/assets/images/logo-light.png')}}" alt="" height="18">
                 </span>
                 <span class="logo-sm">
-                    <img src="{{asset('docteur/assets/images/logo-sm-white.png')}}" alt="" height="24">
+                    <img src="{{asset('admin/assets/images/logo-sm-white.png')}}" alt="" height="24">
                 </span>
             </a>
         </div>
@@ -183,7 +183,7 @@
                                 </a>
                                 <ul class="nav-second-level" aria-expanded="false">
                                     <li>
-                                        <a href="{{ URL::to('/patient/patientAddAdmin') }}">Register Patient</a>
+                                        <a href="registerpatient.html">Register Patient</a>
                                     </li>
                                     <li>
                                         <a href="viewpatients.html">View Patients</a>
@@ -304,7 +304,7 @@
                                     </li>
 
                                     <li>
-                                        <a href="invetory{{asset('docteur/assets.html')}}">Assets</a>
+                                        <a href="invetory{{asset('admin/assets.html')}}">Assets</a>
                                     </li>
                                     
                                 </ul>
@@ -649,7 +649,7 @@
                                                                                         <tbody>
                                                 <tr>
                                                     <td style="width: 36px;">
-                                                        <img src="../doc/{{asset('docteur/assets/images/users/defaultimg.jpg')}}" alt="img" title="contact-img" class="rounded-circle avatar-sm" />
+                                                        <img src="../doc/{{asset('admin/assets/images/users/defaultimg.jpg')}}" alt="img" title="contact-img" class="rounded-circle avatar-sm" />
                                                     </td>
                                                     <td>
                                                     </td>
@@ -667,7 +667,7 @@
                                                                                         <tbody>
                                                 <tr>
                                                     <td style="width: 36px;">
-                                                        <img src="../doc/{{asset('docteur/assets/images/users/usric.png')}}" alt="img" title="contact-img" class="rounded-circle avatar-sm" />
+                                                        <img src="../doc/{{asset('admin/assets/images/users/usric.png')}}" alt="img" title="contact-img" class="rounded-circle avatar-sm" />
                                                     </td>
                                                     <td>
                                                     </td>
@@ -685,7 +685,7 @@
                                                                                         <tbody>
                                                 <tr>
                                                     <td style="width: 36px;">
-                                                        <img src="../doc/{{asset('docteur/assets/images/users/user-default-2-min.png')}}" alt="img" title="contact-img" class="rounded-circle avatar-sm" />
+                                                        <img src="../doc/{{asset('admin/assets/images/users/user-default-2-min.png')}}" alt="img" title="contact-img" class="rounded-circle avatar-sm" />
                                                     </td>
                                                     <td>
                                                     </td>
@@ -745,7 +745,7 @@
                 <!-- User box -->
                 <div class="user-box">
                     <div class="user-img">
-                        <img src="{{asset('docteur/assets/images/users/user-1.jpg')}}" alt="user-img" title="Mat Helme" class="rounded-circle img-fluid">
+                        <img src="{{asset('admin/assets/images/users/user-1.jpg')}}" alt="user-img" title="Mat Helme" class="rounded-circle img-fluid">
                         <a href="javascript:void(0);" class="user-edit"><i class="mdi mdi-pencil"></i></a>
                     </div>
             
@@ -798,28 +798,28 @@
                 <div class="p-3">
                     <div class="inbox-widget">
                         <div class="inbox-item">
-                            <div class="inbox-item-img"><img src="{{asset('docteur/assets/images/users/user-2.jpg')}}" class="rounded-circle" alt=""></div>
+                            <div class="inbox-item-img"><img src="{{asset('admin/assets/images/users/user-2.jpg')}}" class="rounded-circle" alt=""></div>
                             <p class="inbox-item-author"><a href="javascript: void(0);" class="text-dark">Tomaslau</a></p>
                             <p class="inbox-item-text">I've finished it! See you so...</p>
                         </div>
                         <div class="inbox-item">
-                            <div class="inbox-item-img"><img src="{{asset('docteur/assets/images/users/user-3.jpg')}}" class="rounded-circle" alt=""></div>
+                            <div class="inbox-item-img"><img src="{{asset('admin/assets/images/users/user-3.jpg')}}" class="rounded-circle" alt=""></div>
                             <p class="inbox-item-author"><a href="javascript: void(0);" class="text-dark">Stillnotdavid</a></p>
                             <p class="inbox-item-text">This theme is awesome!</p>
                         </div>
                         <div class="inbox-item">
-                            <div class="inbox-item-img"><img src="{{asset('docteur/assets/images/users/user-4.jpg')}}" class="rounded-circle" alt=""></div>
+                            <div class="inbox-item-img"><img src="{{asset('admin/assets/images/users/user-4.jpg')}}" class="rounded-circle" alt=""></div>
                             <p class="inbox-item-author"><a href="javascript: void(0);" class="text-dark">Kurafire</a></p>
                             <p class="inbox-item-text">Nice to meet you</p>
                         </div>
 
                         <div class="inbox-item">
-                            <div class="inbox-item-img"><img src="{{asset('docteur/assets/images/users/user-5.jpg')}}" class="rounded-circle" alt=""></div>
+                            <div class="inbox-item-img"><img src="{{asset('admin/assets/images/users/user-5.jpg')}}" class="rounded-circle" alt=""></div>
                             <p class="inbox-item-author"><a href="javascript: void(0);" class="text-dark">Shahedk</a></p>
                             <p class="inbox-item-text">Hey! there I'm available...</p>
                         </div>
                         <div class="inbox-item">
-                            <div class="inbox-item-img"><img src="{{asset('docteur/assets/images/users/user-6.jpg')}}" class="rounded-circle" alt=""></div>
+                            <div class="inbox-item-img"><img src="{{asset('admin/assets/images/users/user-6.jpg')}}" class="rounded-circle" alt=""></div>
                             <p class="inbox-item-author"><a href="javascript: void(0);" class="text-dark">Adhamdannaway</a></p>
                             <p class="inbox-item-text">This theme is awesome!</p>
                         </div>
@@ -834,23 +834,23 @@
         <div class="rightbar-overlay"></div>
 
         <!-- Vendor js -->
-        <script src="{{asset('docteur/assets/js/vendor.min.js')}}"></script>
+        <script src="{{asset('admin/assets/js/vendor.min.js')}}"></script>
 
         <!-- Plugins js-->
-        <script src="{{asset('docteur/assets/libs/flatpickr/flatpickr.min.js')}}"></script>
-        <script src="{{asset('docteur/assets/libs/jquery-knob/jquery.knob.min.js')}}"></script>
-        <script src="{{asset('docteur/assets/libs/jquery-sparkline/jquery.sparkline.min.js')}}"></script>
-        <script src="{{asset('docteur/assets/libs/flot-charts/jquery.flot.js')}}"></script>
-        <script src="{{asset('docteur/assets/libs/flot-charts/jquery.flot.time.js')}}"></script>
-        <script src="{{asset('docteur/assets/libs/flot-charts/jquery.flot.tooltip.min.js')}}"></script>
-        <script src="{{asset('docteur/assets/libs/flot-charts/jquery.flot.selection.js')}}"></script>
-        <script src="{{asset('docteur/assets/libs/flot-charts/jquery.flot.crosshair.js')}}"></script>
+        <script src="{{asset('admin/assets/libs/flatpickr/flatpickr.min.js')}}"></script>
+        <script src="{{asset('admin/assets/libs/jquery-knob/jquery.knob.min.js')}}"></script>
+        <script src="{{asset('admin/assets/libs/jquery-sparkline/jquery.sparkline.min.js')}}"></script>
+        <script src="{{asset('admin/assets/libs/flot-charts/jquery.flot.js')}}"></script>
+        <script src="{{asset('admin/assets/libs/flot-charts/jquery.flot.time.js')}}"></script>
+        <script src="{{asset('admin/assets/libs/flot-charts/jquery.flot.tooltip.min.js')}}"></script>
+        <script src="{{asset('admin/assets/libs/flot-charts/jquery.flot.selection.js')}}"></script>
+        <script src="{{asset('admin/assets/libs/flot-charts/jquery.flot.crosshair.js')}}"></script>
 
         <!-- Dashboar 1 init js-->
-        <script src="{{asset('docteur/assets/js/pages/dashboard-1.init.js')}}"></script>
+        <script src="{{asset('admin/assets/js/pages/dashboard-1.init.js')}}"></script>
 
         <!-- App js-->
-        <script src="{{asset('docteur/assets/js/app.min.js')}}"></script>
+        <script src="{{asset('admin/assets/js/app.min.js')}}"></script>
         
     </body>
 
