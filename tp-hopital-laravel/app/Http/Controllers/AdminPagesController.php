@@ -16,8 +16,9 @@ class AdminPagesController extends Controller
         return view('admin.login');
     }
 
-    public function dashboardAdmin(){
-        if (!Auth::check()) {
+    public function dashboardAdmin(Request $request){
+        $user = $request->user();
+        if (!Auth::check() || $user->statut == 0) {
             return redirect('/loginAdmin');
         }
         return view('admin.dashboard');

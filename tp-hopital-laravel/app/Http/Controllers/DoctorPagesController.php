@@ -13,12 +13,14 @@ class DoctorPagesController extends Controller
         return view('docteur.login');
     }
 
-    public function dashboardDocteur(){
-        if (!Auth::check()) {
-            return redirect('/loginDocteur');
-        }
+    public function dashboardDocteur(Request $request){
+        $user = $request->user();
+        if (!Auth::check() || $user->statut == 1) {
+                return redirect('/loginDocteur');
+            }
         return view('docteur.dashboard');
     }
+
     
 
     //fonction connexion page admin
