@@ -530,60 +530,49 @@
                                     <div class="card-body">
                                         <h4 class="header-title">Fill all fields</h4>
                                         <!--Add Patient Form-->
-                                        <form method="post" action="{{url('/patient/add')}}">
+                                        <form method="post" action="{{ url('/patient/add') }}">
+                                            @csrf
                                             <div class="form-row">
                                                 <div class="form-group col-md-6">
                                                     <label for="inputEmail4" class="col-form-label">First Name</label>
-                                                    <input type="text" required="required" name="nom" class="form-control" id="inputEmail4" placeholder="Patient's First Name">
+                                                    <input type="text" name="nom" class="form-control" id="inputEmail4" placeholder="Patient's First Name">
                                                 </div>
                                                 <div class="form-group col-md-6">
                                                     <label for="inputPassword4" class="col-form-label">Last Name</label>
-                                                    <input required="required" type="text" name="prenom" class="form-control"  id="inputPassword4" placeholder="Patient`s Last Name">
+                                                    <input type="text" name="prenom" class="form-control" id="inputPassword4" placeholder="Patient's Last Name">
                                                 </div>
                                             </div>
-
+                                        
                                             <div class="form-row">
                                                 <div class="form-group col-md-6">
                                                     <label for="inputEmail4" class="col-form-label">Date Of Birth</label>
-                                                    <input type="date" required="required" name="date_de_naissance" class="form-control" id="inputEmail4" placeholder="DD/MM/YYYY">
+                                                    <input type="date" name="date_de_naissance" class="form-control" id="inputEmail4" placeholder="DD/MM/YYYY">
                                                 </div>
                                                 <div class="form-group col-md-6">
                                                     <label for="inputPassword4" class="col-form-label">Age</label>
-                                                    <input type="number" name="age" class="form-control"  id="inputPassword4" placeholder="Patient`s Age">
+                                                    <input type="number" name="age" class="form-control" id="inputPassword4" placeholder="Patient's Age">
                                                 </div>
                                             </div>
-
+                                        
                                             <div class="form-group">
                                                 <label for="inputAddress" class="col-form-label">Address</label>
-                                                <input required="required" type="text" class="form-control" name="adresse" id="inputAddress" placeholder="Patient's Addresss">
+                                                <input type="text" name="adresse" class="form-control" id="inputAddress" placeholder="Patient's Address">
                                             </div>
-
+                                        
                                             <div class="form-row">
                                                 <div class="form-group col-md-4">
                                                     <label for="inputCity" class="col-form-label">Mobile Number</label>
-                                                    <input required="required" type="tel" name="tel" class="form-control" id="inputCity">
+                                                    <input type="tel" name="tel" class="form-control" id="inputCity">
                                                 </div>
                                                 <div class="form-group col-md-4">
                                                     <label for="inputCity" class="col-form-label">Patient Ailment</label>
-                                                    <input required="required" type="text" name="ailment" class="form-control" id="inputCity">
+                                                    <input type="text" name="ailment" class="form-control" id="inputCity">
                                                 </div>
-                                                {{-- <div class="form-group col-md-4">
-                                                    <label for="inputState" class="col-form-label">Patient's Type</label>
-                                                    <select id="inputState" required="required" name="pat_type" class="form-control">
-                                                        <option>Choose</option>
-                                                        <option>InPatient</option>
-                                                        <option>OutPatient</option>
-                                                    </select>
-                                                </div> --}}
-                                                {{-- <div class="form-group col-md-2" style="display:none">
-                                                    <label for="inputZip" class="col-form-label">Patient Number</label>
-                                                    <input type="text" name="pat_number" value="APMQ5" class="form-control" id="inputZip">
-                                                </div> --}}
                                             </div>
-
+                                        
                                             <button type="submit" class="ladda-button btn btn-primary" data-style="expand-right">Add Patient</button>
-
                                         </form>
+                                        
                                         <!--End Patient Form-->
                                     </div> <!-- end card-body -->
                                 </div> <!-- end card-->
