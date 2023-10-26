@@ -565,16 +565,16 @@
                                                 </div>
                                                 <div class="form-group col-md-4">
                                                     <label for="inputCity" class="col-form-label">Patient Ailment</label>
-                                                    <input required="required" type="text" name="Ailment" class="form-control" id="inputCity">
+                                                    <input required="required" type="text" name="ailment" class="form-control" id="inputCity">
                                                 </div>
-                                                <div class="form-group col-md-4">
+                                                {{-- <div class="form-group col-md-4">
                                                     <label for="inputState" class="col-form-label">Patient's Type</label>
                                                     <select id="inputState" required="required" name="pat_type" class="form-control">
                                                         <option>Choose</option>
                                                         <option>InPatient</option>
                                                         <option>OutPatient</option>
                                                     </select>
-                                                </div>
+                                                </div> --}}
                                                 {{-- <div class="form-group col-md-2" style="display:none">
                                                     <label for="inputZip" class="col-form-label">Patient Number</label>
                                                     <input type="text" name="pat_number" value="APMQ5" class="form-control" id="inputZip">

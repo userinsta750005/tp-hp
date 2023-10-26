@@ -14,18 +14,20 @@ class PatientController extends Controller
             'date_de_naissance' => 'required|date',
             'adresse' => 'required|sting',
             'tel' => 'required|integer',
-            'aliment' => 'required|string',
+            'ailment' => 'required|string',
+            'age' => 'required|integer',
         ]);
+        
+        Patient::create($validatedData);
 
-        $patient = new Patient;
-        $patient->nom = $validatedData['nom'];
-        $patient->prenom = $validatedData['prenom'];
-        $patient->date_de_naissance = $validatedData['date_de_naissance'];
-        $patient->adresse = $validatedData['adresse'];
-        $patient->tel = $validatedData['tel'];
-        $patient->ailment = $validatedData['ailment'];
-        $patient->age = $validatedData['age'];
-        $patient->save(); 
+        // $patient = new Patient;
+        // $patient->nom = $validatedData['nom'];
+        // $patient->prenom = $validatedData['prenom'];
+        // $patient->date_de_naissance = $validatedData['date_de_naissance'];
+        // $patient->adresse = $validatedData['adresse'];
+        // $patient->tel = $validatedData['tel'];
+        // $patient->ailment = $validatedData['ailment'];
+        // $patient->save(); 
 
         // return redirect()->route('page-de-confirmation');
     }
