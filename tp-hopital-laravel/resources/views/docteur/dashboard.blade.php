@@ -86,7 +86,7 @@
                     <div class="dropdown-divider"></div>
 
                     <!-- item-->
-                    <a href="his_doc_logout_partial.php" class="dropdown-item notify-item">
+                    <a href="/logoutDocteur" class="dropdown-item notify-item">
                         <i class="fe-log-out"></i>
                         <span>Logout</span>
                     </a>
@@ -708,7 +708,7 @@
         <div class="rightbar-overlay"></div>
 
         <!-- Vendor js -->
-        <script src="assets/js/vendor.min.js"></script>
+        <script src="{{asset('docteur/assets/js/vendor.min.js')}}"></script>
 
         <!-- Plugins js-->
         <script src="{{asset('docteur/assets/libs/flatpickr/flatpickr.min.js')}}"></script>

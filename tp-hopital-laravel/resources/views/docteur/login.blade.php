@@ -11,15 +11,15 @@
         <meta content="" name="MartDevelopers" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <!-- App favicon -->
-        <link rel="shortcut icon" href="assets/images/favicon.ico">
+        <link rel="shortcut icon" href="{{asset('docteur/assets/images/favicon.ico')}}">
 
         <!-- App css -->
-        <link href="assets/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
-        <link href="assets/css/icons.min.css" rel="stylesheet" type="text/css" />
-        <link href="assets/css/app.min.css" rel="stylesheet" type="text/css" />
+        <link href="{{asset('docteur/assets/css/bootstrap.min.css')}}" rel="stylesheet" type="text/css" />
+        <link href="{{asset('docteur/assets/css/icons.min.css')}}" rel="stylesheet" type="text/css" />
+        <link href="{{asset('docteur/assets/css/app.min.css')}}" rel="stylesheet" type="text/css" />
         <!--Load Sweet Alert Javascript-->
         
-        <script src="assets/js/swal.js"></script>
+        <script src="{{asset('docteur/assets/js/swal.js')}}"></script>
         <!--Inject SWAL-->
         
         
@@ -39,12 +39,12 @@
                                 
                                 <div class="text-center w-75 m-auto">
                                     <a href="index.php">
-                                        <span><img src="assets/images/logo-dark.png" alt="" height="22"></span>
+                                        <span><img src="{{asset('docteur/assets/images/logo-dark.png')}}" alt="" height="22"></span>
                                     </a>
                                     <p class="text-muted mb-4 mt-3">Enter your email address and password to access Doctor panel.</p>
                                 </div>
 
-                                <form method='post' action="{{url('/authenticate')}}">
+                                <form method='post' action="{{url('doctor/authenticate')}}">
                                     {{ csrf_field() }}
 
                                     <div class="form-group mb-3">
@@ -114,10 +114,10 @@
             2020 - 2022 &copy; Hospital Management System. Developed By Martin Mbithi Nzilani</a> 
 </footer>
         <!-- Vendor js -->
-        <script src="assets/js/vendor.min.js"></script>
+        <script src="{{asset('docteur/assets/js/vendor.min.js')}}"></script>
 
         <!-- App js -->
-        <script src="assets/js/app.min.js"></script>
+        <script src="{{asset('docteur/assets/js/app.min.js')}}"></script>
         
     </body>
 
