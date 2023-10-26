@@ -107,7 +107,7 @@
                     </a>
 
                     <!-- item-->
-                    <a href="registerpatient.html" class="dropdown-item">
+                    <a href="{{ URL::to('/patient/patientAddAdmin') }}" class="dropdown-item">
                         <i class="fe-activity mr-1"></i>
                         <span>Patient</span>
                     </a>
@@ -183,7 +183,7 @@
                                 </a>
                                 <ul class="nav-second-level" aria-expanded="false">
                                     <li>
-                                        <a href="registerpatient.html">Register Patient</a>
+                                        <a href="{{ URL::to('/patient/patientAddAdmin') }}">Register Patient</a>
                                     </li>
                                     <li>
                                         <a href="viewpatients.html">View Patients</a>

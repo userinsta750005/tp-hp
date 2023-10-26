@@ -2,9 +2,9 @@
 
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\AdminPagesController;
-use Illuminate\Support\Facades\Route;
-
 use App\Http\Controllers\DoctorPagesController;
+use App\Http\Controllers\PatientController;
+use Illuminate\Support\Facades\Route;
 
 /*
 |--------------------------------------------------------------------------
@@ -28,6 +28,7 @@ Route::get('/logoutAdmin', [AdminPagesController::class, 'logout']);
 Route::post('/admin/authenticate', [AdminPagesController::class, 'authenticate']);
 
 Route::get('/patient/patientAddAdmin', [AdminPagesController::class, 'patientAdd']);
+Route::post('/patient/add', [PatientController::class, 'createPatient']);
 
 //Doctor
 Route::get('/loginDocteur', [DoctorPagesController::class, 'loginDocteur'])->name('loginDocteur');
