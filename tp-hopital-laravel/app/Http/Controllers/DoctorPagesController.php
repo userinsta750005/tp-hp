@@ -21,6 +21,7 @@ class DoctorPagesController extends Controller
     }
     
 
+    //fonction connexion page admin
     public function authenticate(Request $request)
     {
         request()->validate([
@@ -37,6 +38,8 @@ class DoctorPagesController extends Controller
             } else {
             return redirect('/loginDocteur')->with('error', 'Identifiants incorrects');
         }
+    }else{
+        return redirect('/loginDocteur')->with('error', 'Identifiants incorrects');
     }
  }
     public function logout() {

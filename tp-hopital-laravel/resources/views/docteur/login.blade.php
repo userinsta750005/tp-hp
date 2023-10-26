@@ -44,24 +44,29 @@
                                     <p class="text-muted mb-4 mt-3">Enter your email address and password to access Doctor panel.</p>
                                 </div>
 
-                                <form method='post' >
+                                <form method='post' action="{{url('/authenticate')}}">
+                                    {{ csrf_field() }}
 
                                     <div class="form-group mb-3">
-                                        <label for="emailaddress">Doctor Number</label>
-                                        <input class="form-control" name="doc_number" type="text" id="emailaddress" required="" placeholder="Enter your doctor number">
+                                        <label for="emailaddress">Doctor email</label>
+                                        <input class="form-control" name="email" type="email" id="emailaddress" required="" placeholder="Enter your email">
                                     </div>
 
                                     <div class="form-group mb-3">
                                         <label for="password">Password</label>
-                                        <input class="form-control" name="doc_pwd" type="password" required="" id="password" placeholder="Enter your password">
+                                        <input class="form-control" name="password" type="password" id="password" placeholder="Enter your password">
                                     </div>
 
                                     <div class="form-group mb-0 text-center">
-                                        <button class="btn btn-success btn-block" name="doc_login" type="submit"> Log In </button>
+                                        <button class="btn btn-primary btn-block" name="admin_login" type="submit">Log In </button>
                                     </div>
 
                                 </form>
-
+                                @if(session('error'))
+                                <div class="alert alert-danger">
+                                    {{ session('error') }}
+                                </div>
+                                @endif
                                 <!--
                                 For Now Lets Disable This 
                                 This feature will be implemented on later versions
