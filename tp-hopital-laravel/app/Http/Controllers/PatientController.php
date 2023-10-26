@@ -23,7 +23,8 @@ class PatientController extends Controller
         $patient->date_de_naissance = $validatedData['date_de_naissance'];
         $patient->adresse = $validatedData['adresse'];
         $patient->tel = $validatedData['tel'];
-        $patient->aliment = $validatedData['aliment'];
+        $patient->ailment = $validatedData['ailment'];
+        $patient->age = $validatedData['age'];
         $patient->save(); 
 
         // return redirect()->route('page-de-confirmation');

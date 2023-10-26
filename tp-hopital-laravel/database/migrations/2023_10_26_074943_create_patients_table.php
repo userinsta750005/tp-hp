@@ -17,8 +17,9 @@ return new class extends Migration
             $table->string('prenom');
             $table->date('date_de_naissance');
             $table->string('adresse');
+            $table->string('age');
             $table->integer('tel');
-            $table->string('Ailment');
+            $table->string('ailment');
             $table->timestamps();
         });
     }

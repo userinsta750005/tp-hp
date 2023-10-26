@@ -545,11 +545,11 @@
                                             <div class="form-row">
                                                 <div class="form-group col-md-6">
                                                     <label for="inputEmail4" class="col-form-label">Date Of Birth</label>
-                                                    <input type="text" required="required" name="date_de_naissance" class="form-control" id="inputEmail4" placeholder="DD/MM/YYYY">
+                                                    <input type="date" required="required" name="date_de_naissance" class="form-control" id="inputEmail4" placeholder="DD/MM/YYYY">
                                                 </div>
                                                 <div class="form-group col-md-6">
                                                     <label for="inputPassword4" class="col-form-label">Age</label>
-                                                    <input type="text" name="pat_age" class="form-control"  id="inputPassword4" placeholder="Patient`s Age">
+                                                    <input type="number" name="age" class="form-control"  id="inputPassword4" placeholder="Patient`s Age">
                                                 </div>
                                             </div>
 
@@ -561,11 +561,11 @@
                                             <div class="form-row">
                                                 <div class="form-group col-md-4">
                                                     <label for="inputCity" class="col-form-label">Mobile Number</label>
-                                                    <input required="required" type="text" name="tel" class="form-control" id="inputCity">
+                                                    <input required="required" type="tel" name="tel" class="form-control" id="inputCity">
                                                 </div>
                                                 <div class="form-group col-md-4">
                                                     <label for="inputCity" class="col-form-label">Patient Ailment</label>
-                                                    <input required="required" type="text" name="Aliment" class="form-control" id="inputCity">
+                                                    <input required="required" type="text" name="Ailment" class="form-control" id="inputCity">
                                                 </div>
                                                 <div class="form-group col-md-4">
                                                     <label for="inputState" class="col-form-label">Patient's Type</label>
@@ -575,13 +575,13 @@
                                                         <option>OutPatient</option>
                                                     </select>
                                                 </div>
-                                                <div class="form-group col-md-2" style="display:none">
+                                                {{-- <div class="form-group col-md-2" style="display:none">
                                                     <label for="inputZip" class="col-form-label">Patient Number</label>
                                                     <input type="text" name="pat_number" value="APMQ5" class="form-control" id="inputZip">
-                                                </div>
+                                                </div> --}}
                                             </div>
 
-                                            <button type="submit" name="add_patient" class="ladda-button btn btn-primary" data-style="expand-right">Add Patient</button>
+                                            <button type="submit" class="ladda-button btn btn-primary" data-style="expand-right">Add Patient</button>
 
                                         </form>
                                         <!--End Patient Form-->
