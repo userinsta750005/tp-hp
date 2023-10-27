@@ -574,13 +574,7 @@
                                         
                                             <tfoot>
                                             <tr class="active">
-                                                <td colspan="8">
-                                                    <div class="text-right">
-                                                        <ul class="pagination pagination-rounded justify-content-end footable-pagination m-t-10 mb-0"></ul>
-                                                        {{ $patients->links() }}
-                                                    </div>
-                                                </td>
-                                            </tr>
+                                                {{ $patients->links() }}
                                             </tfoot>
                                         </table>
                                     </div> <!-- end .table-responsive-->
