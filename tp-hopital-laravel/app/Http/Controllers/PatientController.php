@@ -43,4 +43,35 @@ class PatientController extends Controller
 
         return redirect()->route('patientViewAdmin')->with('success', 'Le patient a été supprimé avec succès.');
     }
+
+    public function edit($id)
+{
+    $patient = Patient::find($id);
+
+    if (!$patient) {
+        return redirect()->route('patientViewAdmin')->with('error', 'Patient non trouvé.');
+    }
+
+    return view('admin.patient.editPatient', ['patient' => $patient]);
+}
+
+public function update(Request $request, $id)
+{
+    $patient = Patient::find($id);
+
+    if (!$patient) {
+        return redirect()->route('patientViewAdmin')->with('error', 'Patient non trouvé.');
+    }
+
+    // Validez le formulaire comme d'habitude et mettez à jour le patient
+    $this->validate($request, [
+        // Vos règles de validation
+    ]);
+
+    // Mettez à jour les attributs du patient avec les nouvelles valeurs
+    $patient->update($request->all());
+
+    return redirect()->route('patientViewAdmin')->with('success', 'Le patient a été mis à jour avec succès.');
+}
+
 }

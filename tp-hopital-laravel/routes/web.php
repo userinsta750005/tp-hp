@@ -38,6 +38,10 @@ Route::get('/dashboardDocteur', [DoctorPagesController::class, 'dashboardDocteur
 Route::get('/logoutDocteur', [DoctorPagesController::class, 'logout']);
 Route::post('/doctor/authenticate', [DoctorPagesController::class, 'authenticate']);
 
+Route::get('/patient/edit/{id}', [PatientController::class, 'edit'])->name('edit-patient');
+Route::post('/patient/update/{id}', [PatientController::class, 'update'])->name('update-patient');
+
+
 
 // Route::get('/dashboard', function () {
 //     return view('dashboard');

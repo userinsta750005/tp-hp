@@ -1,7 +1,11 @@
+
+<!--Server side code to handle  Patient Registration-->
+<!--End Server Side-->
+<!--End Patient Registration-->
 <!DOCTYPE html>
 <html lang="en">
     
-    <!--Head Code-->
+    <!--Head-->
     <head>
         <meta charset="utf-8" />
         <title>Hospital Management System -A Super Responsive Information System</title>
@@ -10,45 +14,34 @@
         <meta content="MartDevelopers" name="author" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <!-- App favicon -->
-        <link rel="shortcut icon" href="{{asset('admin/assets/images/favicon.ico')}}">
+        <link rel="shortcut icon" href="{{asset("admin/assets/images/favicon.ico")}}">
 
         <!-- Plugins css -->
-        <link href="{{asset('admin/assets/libs/flatpickr/flatpickr.min.css')}}" rel="stylesheet" type="text/css" />
+        <link href="{{asset("admin/assets/libs/flatpickr/flatpickr.min.css")}}" rel="stylesheet" type="text/css" />
 
         <!-- App css -->
-        <link href="{{asset('admin/assets/css/bootstrap.min.css')}}" rel="stylesheet" type="text/css" />
-        <link href="{{asset('admin/assets/css/icons.min.css')}}" rel="stylesheet" type="text/css" />
-        <link href="{{asset('admin/assets/css/app.min.css')}}" rel="stylesheet" type="text/css" />
+        <link href="{{asset("admin/assets/css/bootstrap.min.css")}}" rel="stylesheet" type="text/css" />
+        <link href="{{asset("admin/assets/css/icons.min.css")}}" rel="stylesheet" type="text/css" />
+        <link href="{{asset("admin/assets/css/app.min.css")}}" rel="stylesheet" type="text/css" />
          <!-- Loading button css -->
-         <link href="{{asset('admin/assets/libs/ladda/ladda-themeless.min.css')}}" rel="stylesheet" type="text/css" />
+         <link href="{{asset("admin/assets/libs/ladda/ladda-themeless.min.css")}}" rel="stylesheet" type="text/css" />
 
         <!-- Footable css -->
-        <link href="{{asset('admin/assets/libs/footable/footable.core.min.css')}}" rel="stylesheet" type="text/css" />
+        <link href="{{asset("admin/assets/libs/footable/footable.core.min.css")}}" rel="stylesheet" type="text/css" />
 
        <!--Load Sweet Alert Javascript-->
-       <script src="{{asset('admin/assets/js/swal.js')}}"></script>
+       <script src="{{asset("admin/assets/js/swal.js")}}"></script>
        
         <!--Inject SWAL-->
         
         
-</head>
-<style>
-    .hidden.sm\:flex-1.sm\:flex.sm\:items-center.sm\:justify-between {
-    display: none!important;
-}
-
-nav.flex.items-center.justify-between {
-    display: flex!important;
-    justify-content: flex-end!important;
-}
-</style>
-    <body>
+</head>    <body>
 
         <!-- Begin page -->
         <div id="wrapper">
 
             <!-- Topbar Start -->
-                    <div class="navbar-custom">
+                <div class="navbar-custom">
         <ul class="list-unstyled topnav-menu float-right mb-0">
 
             <li class="d-none d-sm-block">
@@ -69,7 +62,7 @@ nav.flex.items-center.justify-between {
             
             <li class="dropdown notification-list">
                 <a class="nav-link dropdown-toggle nav-user mr-0 waves-effect waves-light" data-toggle="dropdown" href="#" role="button" aria-haspopup="false" aria-expanded="false">
-                    <img src="{{asset('admin/assets/images/users/doc-icon.png" alt="dpic" class="rounded-circle')}}">
+                    <img src="{{asset("admin/assets/images/users/doc-icon.png")}}" alt="dpic" class="rounded-circle">
                     <span class="pro-user-name ml-1">
                         System Administrator <i class="mdi mdi-chevron-down"></i> 
                     </span>
@@ -106,12 +99,12 @@ nav.flex.items-center.justify-between {
         <div class="logo-box">
             <a href="his_admin_dashboard.php" class="logo text-center">
                 <span class="logo-lg">
-                    <img src="{{asset('admin/assets/images/logo-light.png')}}" alt="" height="18">
+                    <img src="{{asset("admin/assets/images/logo-light.png")}}" alt="" height="18">
                     <!-- <span class="logo-lg-text-light">UBold</span> -->
                 </span>
                 <span class="logo-sm">
                     <!-- <span class="logo-sm-text-dark">U</span> -->
-                    <img src="{{asset('admin/assets/images/logo-sm-white.png')}}" alt="" height="24">
+                    <img src="{{asset("admin/assets/images/logo-sm-white.png")}}" alt="" height="24">
                 </span>
             </a>
         </div>
@@ -130,44 +123,44 @@ nav.flex.items-center.justify-between {
                 </a>
                 <div class="dropdown-menu">
                     <!-- item-->
-                    <a href="his_admin_add_employee.php" class="dropdown-item">
+                    <a href="addemployee.html" class="dropdown-item">
                         <i class="fe-users mr-1"></i>
                         <span>Employee</span>
                     </a>
 
                     <!-- item-->
-                    <a href="his_admin_register_patient.php" class="dropdown-item">
+                    <a href="registerpatient.html" class="dropdown-item">
                         <i class="fe-activity mr-1"></i>
                         <span>Patient</span>
                     </a>
 
                     <!-- item-->
-                    <a href="his_admin_add_payroll.php" class="dropdown-item">
+                    <a href="addpayrol.html" class="dropdown-item">
                         <i class="fe-layers mr-1"></i>
                         <span>Payroll</span>
                     </a>
 
                     <!-- item-->
-                    <a href="his_admin_add_vendor.php" class="dropdown-item">
+                    <a href="addvendorredetails.html" class="dropdown-item">
                         <i class="fe-shopping-cart mr-1"></i>
                         <span>Vendor</span>
                     </a>
 
 
                     <!-- item-->
-                    <a href="his_admin_add_medical_record.php" class="dropdown-item">
+                    <a href="addmedicalrecord.html" class="dropdown-item">
                         <i class="fe-list mr-1"></i>
                         <span>Medical Report</span>
                     </a>
 
                     <!-- item-->
-                    <a href="his_admin_lab_report.php" class="dropdown-item">
+                    <a href="addlabreport.html" class="dropdown-item">
                         <i class="fe-hard-drive mr-1"></i>
                         <span>Laboratory Report</span>
                     </a>
 
                     <!-- item-->
-                    <a href="his_admin_surgery_records.php" class="dropdown-item">
+                    <a href="surgeyrecord.html" class="dropdown-item">
                         <i class="fe-anchor mr-1"></i>
                         <span>Surgical/Theatre Report</span>
                     </a>
@@ -184,7 +177,7 @@ nav.flex.items-center.justify-between {
             <!-- end Topbar -->
 
             <!-- ========== Left Sidebar Start ========== -->
-                <div class="left-side-menu">
+            <div class="left-side-menu">
 
                 <div class="slimscroll-menu">
 
@@ -196,7 +189,7 @@ nav.flex.items-center.justify-between {
                             <li class="menu-title">Navigation</li>
 
                             <li>
-                                <a href="his_admin_dashboard.php">
+                                <a href="dashboard.html">
                                     <i class="fe-airplay"></i>
                                     <span> Dashboard </span>
                                 </a>
@@ -211,20 +204,20 @@ nav.flex.items-center.justify-between {
                                 </a>
                                 <ul class="nav-second-level" aria-expanded="false">
                                     <li>
-                                        <a href="his_admin_register_patient.php">Register Patient</a>
+                                        <a href="registerpatient.html">Register Patient</a>
                                     </li>
                                     <li>
-                                        <a href="his_admin_view_patients.php">View Patients</a>
+                                        <a href="viewpatients.html">View Patients</a>
                                     </li>
                                     <li>
-                                        <a href="his_admin_manage_patient.php">Manage Patients</a>
+                                        <a href="managepatient.html">Manage Patients</a>
                                     </li>
                                     <hr>
                                     <li>
-                                        <a href="his_admin_discharge_patient.php">Discharge Patients</a>
+                                        <a href="discharge.html">Discharge Patients</a>
                                     </li>
                                     <li>
-                                        <a href="his_admin_patient_transfer.php">Patient Transfers</a>
+                                        <a href="patienttransfer.html">Patient Transfers</a>
                                     </li>
                                 </ul>
                             </li>
@@ -237,20 +230,20 @@ nav.flex.items-center.justify-between {
                                 </a>
                                 <ul class="nav-second-level" aria-expanded="false">
                                     <li>
-                                        <a href="his_admin_add_employee.php">Add Employee</a>
+                                        <a href="addemployee.html">Add Employee</a>
                                     </li>
                                     <li>
-                                        <a href="his_admin_view_employee.php">View Employees</a>
+                                        <a href="viewemployees.html">View Employees</a>
                                     </li>
                                     <li>
-                                        <a href="his_admin_manage_employee.php">Manage Employees</a>
+                                        <a href="manageemployee.html">Manage Employees</a>
                                     </li>
                                     <hr>
                                     <li>
-                                        <a href="his_admin_assaign_dept.php">Assign Department</a>
+                                        <a href="assigndepartement.html">Assign Department</a>
                                     </li>
                                     <li>
-                                        <a href="his_admin_transfer_employee.php">Transfer Employee</a>
+                                        <a href="transferemployee.html">Transfer Employee</a>
                                     </li>
                                 </ul>
                             </li>
@@ -263,33 +256,33 @@ nav.flex.items-center.justify-between {
                                 </a>
                                 <ul class="nav-second-level" aria-expanded="false">
                                     <li>
-                                        <a href="his_admin_add_pharm_cat.php">Add Pharm Category</a>
+                                        <a href="addpharmacycategory.html">Add Pharm Category</a>
                                     </li>
                                     <li>
-                                        <a href="his_admin_view_pharm_cat.php">View Pharm Category</a>
+                                        <a href="viewpharmacycategory.html">View Pharm Category</a>
                                     </li>
                                     <li>
-                                        <a href="his_admin_manage_pharm_cat.php">Manage Pharm Category</a>
-                                    </li>
-                                    <hr>
-                                    <li>
-                                        <a href="his_admin_add_pharmaceuticals.php">Add Pharmaceuticals</a>
-                                    </li>
-                                    <li>
-                                        <a href="his_admin_view_pharmaceuticals.php">View Pharmaceuticals</a>
-                                    </li>
-                                    <li>
-                                        <a href="his_admin_manage_pharmaceuticals.php">Manage Pharmaceuticals</a>
+                                        <a href="managepharmacycategory.html">Manage Pharm Category</a>
                                     </li>
                                     <hr>
                                     <li>
-                                        <a href="his_admin_add_presc.php">Add Prescriptions</a>
+                                        <a href="addpharmaceutical.html">Add Pharmaceuticals</a>
                                     </li>
                                     <li>
-                                        <a href="his_admin_view_presc.php">View Prescriptions</a>
+                                        <a href="viewpharmaceutical.html">View Pharmaceuticals</a>
                                     </li>
                                     <li>
-                                        <a href="his_admin_manage_presc.php">Manage Prescriptions</a>
+                                        <a href="managepharmaceutical.html">Manage Pharmaceuticals</a>
+                                    </li>
+                                    <hr>
+                                    <li>
+                                        <a href="addprescription.html">Add Prescriptions</a>
+                                    </li>
+                                    <li>
+                                        <a href="viewprescription.html">View Prescriptions</a>
+                                    </li>
+                                    <li>
+                                        <a href="manageprescription.html">Manage Prescriptions</a>
                                     </li>
                                 </ul>
                             </li>
@@ -302,17 +295,17 @@ nav.flex.items-center.justify-between {
                                 </a>
                                 <ul class="nav-second-level" aria-expanded="false">
                                     <li>
-                                        <a href="his_admin_add_acc.payable.php">Add Acc. Payable</a>
+                                        <a href="addaccountpayable.html">Add Acc. Payable</a>
                                     </li>
                                     <li>
-                                        <a href="his_admin_manage_acc_payable.php">Manage Acc. Payable</a>
+                                        <a href="manageaccountpayable.html">Manage Acc. Payable</a>
                                     </li>
                                     <hr>
                                     <li>
-                                        <a href="his_admin_add_acc_receivable.php">Add Acc. Receivable</a>
+                                        <a href="addreceivable.html">Add Acc. Receivable</a>
                                     </li>
                                     <li>
-                                        <a href="his_admin_manage_acc_receivable.php">Manage Acc. Receivable</a>
+                                        <a href="manageaccountreceivable.html">Manage Acc. Receivable</a>
                                     </li>
                                     <hr>
                                     
@@ -328,11 +321,11 @@ nav.flex.items-center.justify-between {
                                 <ul class="nav-second-level" aria-expanded="false">
                                    
                                     <li>
-                                        <a href="his_admin_pharm_inventory.php">Pharmaceuticals</a>
+                                        <a href="inventorypharmaceuticals.html">Pharmaceuticals</a>
                                     </li>
 
                                     <li>
-                                        <a href="his_admin_equipments_inventory.php">Assets</a>
+                                        <a href="invetory{{asset("admin/assets.html")}}">Assets</a>
                                     </li>
                                     
                                 </ul>
@@ -346,22 +339,22 @@ nav.flex.items-center.justify-between {
                                 </a>
                                 <ul class="nav-second-level" aria-expanded="false">
                                     <li>
-                                        <a href="his_admin_inpatient_records.php">InPatient Records</a>
+                                        <a href="inpatientrecords.html">InPatient Records</a>
                                     </li>
                                     <li>
                                         <a href="his_admin_outpatient_records.php">OutPatient Records</a>
                                     </li>
                                     <li>
-                                        <a href="his_admin_employee_records.php">Employee Records</a>
+                                        <a href="employeerecords.html">Employee Records</a>
                                     </li>
                                     <li>
-                                        <a href="his_admin_pharmaceutical_records.php">Pharmaceutical Records</a>
+                                        <a href="pharmaceuticalrecords.html">Pharmaceutical Records</a>
                                     </li>
                                     <li>
-                                        <a href="his_admin_accounting_records.php">Accounting Records</a>
+                                        <a href="accountrecords.html">Accounting Records</a>
                                     </li>
                                     <li>
-                                        <a href="his_admin_medical_records.php">Medical Records</a>
+                                        <a href="medicalrecord.html">Medical Records</a>
                                     </li>
                                     
                                 </ul>
@@ -375,10 +368,10 @@ nav.flex.items-center.justify-between {
                                 </a>
                                 <ul class="nav-second-level" aria-expanded="false">
                                     <li>
-                                        <a href="his_admin_add_medical_record.php">Add Medical Record</a>
+                                        <a href="addmedicalrecord.html">Add Medical Record</a>
                                     </li>
                                     <li>
-                                        <a href="his_admin_manage_medical_record.php">Manage Medical Records</a>
+                                        <a href="managemedicalrecord.html">Manage Medical Records</a>
                                     </li>
                                     
                                 </ul>
@@ -392,26 +385,26 @@ nav.flex.items-center.justify-between {
                                 </a>
                                 <ul class="nav-second-level" aria-expanded="false">
                                     <li>
-                                        <a href="his_admin_patient_lab_test.php">Patient Lab Tests</a>
+                                        <a href="patientlabtest.html">Patient Lab Tests</a>
                                     </li>
                                     <li>
-                                        <a href="his_admin_patient_lab_result.php">Patient Lab Results</a>
+                                        <a href="patientladdresults.html">Patient Lab Results</a>
                                     </li>
                                     <li>
-                                        <a href="his_admin_patient_lab_vitals.php">Patient Vitals</a>
+                                        <a href="patientvitals.html">Patient Vitals</a>
                                     </li>
                                     <li>
-                                        <a href="his_admin_employee_lab_vitals.php">Employee Vitals</a>
+                                        <a href="employeevitals.html">Employee Vitals</a>
                                     </li>
                                     <li>
-                                        <a href="his_admin_lab_report.php">Lab Reports</a>
+                                        <a href="labreports.html">Lab Reports</a>
                                     </li>
                                     <hr>
                                     <li>
-                                        <a href="his_admin_add_lab_equipment.php">Add Lab Equipment</a>
+                                        <a href="addlabreport.html">Add Lab Equipment</a>
                                     </li>
                                     <li>
-                                        <a href="his_admin_manage_lab_equipment.php">Manage Lab Equipments</a>
+                                        <a href="managelabequipment.html">Manage Lab Equipments</a>
                                     </li>
                                 </ul>
                             </li>
@@ -424,20 +417,20 @@ nav.flex.items-center.justify-between {
                                 </a>
                                 <ul class="nav-second-level" aria-expanded="false">
                                     <li>
-                                        <a href="his_admin_add_equipment.php">Add Equipment</a>
+                                        <a href="addequipment.html">Add Equipment</a>
                                     </li>
                                     <li>
-                                        <a href="his_admin_manage_equipment.php">Manage Equipments</a>
+                                        <a href="manageequipment.html">Manage Equipments</a>
                                     </li>
                                     <li>
                                         <a href="his_admin_add_theatre_patient.php">Add Patient</a>
                                     </li>
                                     <li>
-                                        <a href="his_admin_manage_theatre_patient.php">Manage Patients</a>
+                                        <a href="managepatient.html">Manage Patients</a>
                                     </li>
 
                                     <li>
-                                        <a href="his_admin_surgery_records.php">Surgery Records</a>
+                                        <a href="surgeyrecord.html">Surgery Records</a>
                                     </li>
                                 </ul>
                             </li>
@@ -450,13 +443,13 @@ nav.flex.items-center.justify-between {
                                 </a>
                                 <ul class="nav-second-level" aria-expanded="false">
                                     <li>
-                                        <a href="his_admin_add_payroll.php">Add Payroll</a>
+                                        <a href="addpayrol.html">Add Payroll</a>
                                     </li>
                                     <li>
-                                        <a href="his_admin_manage_payrolls.php">Manage Payrolls</a>
+                                        <a href="managepayrol.html">Manage Payrolls</a>
                                     </li>
                                     <li>
-                                        <a href="his_admin_generate_payrolls.php">Generate Payrolls</a>
+                                        <a href="payrolgeneration.html">Generate Payrolls</a>
                                     </li>
                                 </ul>
                             </li>
@@ -469,10 +462,10 @@ nav.flex.items-center.justify-between {
                                 </a>
                                 <ul class="nav-second-level" aria-expanded="false">
                                     <li>
-                                        <a href="his_admin_add_vendor.php">Add Vendor</a>
+                                        <a href="addvendorredetails.html">Add Vendor</a>
                                     </li>
                                     <li>
-                                        <a href="his_admin_manage_vendor.php">Manage Vendors</a>
+                                        <a href="managevendor.html">Manage Vendors</a>
                                     </li>
                                     
                                 </ul>
@@ -485,7 +478,7 @@ nav.flex.items-center.justify-between {
                                 </a>
                                 <ul class="nav-second-level" aria-expanded="false">
                                     <li>
-                                        <a href="his_admin_manage_password_resets.php">Manage</a>
+                                        <a href="passwordrecords.html">Manage</a>
                                     </li>
                                                                         
                                 </ul>
@@ -501,7 +494,8 @@ nav.flex.items-center.justify-between {
                 </div>
                 <!-- Sidebar -left -->
 
-            </div>            <!-- Left Sidebar End -->
+            </div>             
+            <!-- Left Sidebar End -->
 
             <!-- ============================================================== -->
             <!-- Start Page Content here -->
@@ -519,74 +513,70 @@ nav.flex.items-center.justify-between {
                                 <div class="page-title-box">
                                     <div class="page-title-right">
                                         <ol class="breadcrumb m-0">
-                                            <li class="breadcrumb-item"><a href="javascript: void(0);">Dashboard</a></li>
-                                            <li class="breadcrumb-item"><a href="javascript: void(0);">Surgery | Theatre</a></li>
+                                            <li class="breadcrumb-item"><a href="his_admin_dashboard.php">Dashboard</a></li>
+                                            <li class="breadcrumb-item"><a href="javascript: void(0);">Patients</a></li>
                                             <li class="breadcrumb-item active">Add Patient</li>
                                         </ol>
                                     </div>
-                                    <h4 class="page-title">Add Patient</h4>
+                                    <h4 class="page-title">Add Patient Details</h4>
                                 </div>
                             </div>
                         </div>     
                         <!-- end page title --> 
-
+                        <!-- Form row -->
                         <div class="row">
                             <div class="col-12">
-                                <div class="card-box">
-                                    <h4 class="header-title"></h4>
-                                    <div class="mb-2">
-                                        <div class="row">
-                                            <div class="col-12 text-sm-center form-inline" >
-                                                <div class="form-group mr-2" style="display:none">
-                                                    <select id="demo-foo-filter-status" class="custom-select custom-select-sm">
-                                                        <option value="">Show all</option>
-                                                        <option value="Discharged">Discharged</option>
-                                                        <option value="OutPatients">OutPatients</option>
-                                                        <option value="InPatients">InPatients</option>
-                                                    </select>
+                                <div class="card">
+                                    <div class="card-body">
+                                        <h4 class="header-title">Fill all fields</h4>
+                                        <!--Add Patient Form-->
+                                        <form method="post" action="{{ route('update-patient', ['id' => $patient->id]) }}">
+                                            @csrf
+                                            <div class="form-row">
+                                                <div class="form-group col-md-6">
+                                                    <label for="nomInput" class="col-form-label">First Name</label>
+                                                    <input type="text" name="nom" value="{{ $patient->nom }}" class="form-control" id="nomInput" placeholder="Patient's First Name">
                                                 </div>
-                                                <div class="form-group">
-                                                    <input id="demo-foo-search" type="text" placeholder="Search" class="form-control form-control-sm" autocomplete="on">
+                                                <div class="form-group col-md-6">
+                                                    <label for="prenomInput" class="col-form-label">Last Name</label>
+                                                    <input type="text" name="prenom" value="{{ $patient->prenom }}" class="form-control" id="prenomInput" placeholder="Patient's Last Name">
                                                 </div>
                                             </div>
-                                        </div>
-                                    </div>
-                                    
-                                    <div class="table-responsive">
-                                        <table id="demo-foo-filtering" class="table table-bordered toggle-circle mb-0" data-page-size="7">
-                                            <thead>
-                                            <tr>
-                                                <th>#</th>
-                                                <th data-toggle="true">Patient Name</th>
-                                                <th data-hide="phone">Patient Number</th>
-                                                <th data-hide="phone">Patient Address</th>
-                                                <th data-hide="phone">Patient Category</th>
-                                                <th data-hide="phone">Action</th>
-                                            </tr>
-                                            </thead>
-                                            
-                                            <tbody>
-                                                @foreach($patients as $patient)
-                                                <tr>
-                                                    <td>{{ $loop->iteration }}</td>
-                                                    <td>{{ $patient->nom }}</td>
-                                                    <td>{{ $patient->prenom }}</td>
-                                                    <td>{{ $patient->date_de_naissance }}</td>
-                                                    <td>{{ $patient->adresse }}</td>
-                                                    <td>{{ $patient->ailment }}</td>
-                                                    <td>
-                                                        <a href="{{ route('delete-patient', ['id' => $patient->id]) }}" class="badge badge-success">
-                                                            <i class="mdi mdi-eye"></i> Supprimer</a>
-                                                            <a href="{{ route('edit-patient', ['id' => $patient->id]) }}" class="badge badge-primary">
-                                                                <i class="mdi mdi-check-box-outline"></i>Edit Patient
-                                                            </a>
-                                                    </td>
-                                                </tr>
-                                                @endforeach
-                                            </tbody>
-                                        </table>
-                                    </div> <!-- end .table-responsive-->
-                                </div> <!-- end card-box -->
+                                        
+                                            <div class="form-row">
+                                                <div class="form-group col-md-6">
+                                                    <label for="dobInput" class="col-form-label">Date Of Birth</label>
+                                                    <input type="date" name="date_de_naissance" value="{{ $patient->date_de_naissance }}" class="form-control" id="dobInput">
+                                                </div>
+                                                <div class="form-group col-md-6">
+                                                    <label for="ageInput" class="col-form-label">Age</label>
+                                                    <input type="number" name="age" value="{{ $patient->age }}" class="form-control" id="ageInput" placeholder="Patient's Age">
+                                                </div>
+                                            </div>
+                                        
+                                            <div class="form-group">
+                                                <label for="addressInput" class="col-form-label">Address</label>
+                                                <input type="text" name="adresse" value="{{ $patient->adresse }}" class="form-control" id="addressInput" placeholder="Patient's Address">
+                                            </div>
+                                        
+                                            <div class="form-row">
+                                                <div class="form-group col-md-4">
+                                                    <label for="mobileInput" class="col-form-label">Mobile Number</label>
+                                                    <input type="tel" name="tel" value="{{ $patient->tel }}" class="form-control" id="mobileInput">
+                                                </div>
+                                                <div class="form-group col-md-4">
+                                                    <label for="ailmentInput" class="col-form-label">Patient Ailment</label>
+                                                    <input type="text" name="ailment" value="{{ $patient->ailment }}" class="form-control" id="ailmentInput">
+                                                </div>
+                                            </div>
+                                        
+                                            <button type="submit" class="ladda-button btn btn-primary" data-style="expand-right">Update Patient</button>
+                                        </form>
+                                        
+                                        
+                                        <!--End Patient Form-->
+                                    </div> <!-- end card-body -->
+                                </div> <!-- end card-->
                             </div> <!-- end col -->
                         </div>
                         <!-- end row -->
@@ -594,16 +584,13 @@ nav.flex.items-center.justify-between {
                     </div> <!-- container -->
 
                 </div> <!-- content -->
-                <tfoot>
-                    <tr style="margin-left:0px;" class="active">
-                        {{ $patients->links() }}
-                    </tfoot>
+
                 <!-- Footer Start -->
-                 <footer class="footer">
+                <footer class="footer">
     <div class="container-fluid">
         <div class="row">
             <div class="col-md-12">
-                2020 - 2023 &copy; Hospital Management System. Developed By Martin Mbithi Nzilani</a>
+                2020 - 2022 &copy; Hospital Management System. Developed By Martin Mbithi Nzilani</a>
             </div>
 
         </div>
@@ -620,21 +607,22 @@ nav.flex.items-center.justify-between {
         </div>
         <!-- END wrapper -->
 
-
+       
         <!-- Right bar overlay-->
         <div class="rightbar-overlay"></div>
 
         <!-- Vendor js -->
-        <script src="{{asset('admin/assets/js/vendor.min.js')}}"></script>
+        <script src="{{asset("admin/assets/js/vendor.min.js")}}"></script>
 
-        <!-- Footable js -->
-        <script src="{{asset('admin/assets/libs/footable/footable.all.min.js')}}"></script>
+        <!-- App js-->
+        <script src="{{asset("admin/assets/js/app.min.js")}}"></script>
 
-        <!-- Init js -->
-        <script src="{{asset('admin/assets/js/pages/foo-tables.init.js')}}"></script>
+        <!-- Loading buttons js -->
+        <script src="{{asset("admin/assets/libs/ladda/spin.js")}}"></script>
+        <script src="{{asset("admin/assets/libs/ladda/ladda.js")}}"></script>
 
-        <!-- App js -->
-        <script src="{{asset('admin/assets/js/app.min.js')}}"></script>
+        <!-- Buttons init js-->
+        <script src="{{asset("admin/assets/js/pages/loading-btn.init.js")}}"></script>
         
     </body>
 
