@@ -32,6 +32,16 @@
         
         
 </head>
+<style>
+    .hidden.sm\:flex-1.sm\:flex.sm\:items-center.sm\:justify-between {
+    display: none!important;
+}
+
+nav.flex.items-center.justify-between {
+    display: flex!important;
+    justify-content: flex-end!important;
+}
+</style>
     <body>
 
         <!-- Begin page -->
@@ -571,11 +581,6 @@
                                                 </tr>
                                                 @endforeach
                                             </tbody>
-                                        
-                                            <tfoot>
-                                            <tr class="active">
-                                                {{ $patients->links() }}
-                                            </tfoot>
                                         </table>
                                     </div> <!-- end .table-responsive-->
                                 </div> <!-- end card-box -->
@@ -586,7 +591,10 @@
                     </div> <!-- container -->
 
                 </div> <!-- content -->
-
+                <tfoot>
+                    <tr style="margin-left:0px;" class="active">
+                        {{ $patients->links() }}
+                    </tfoot>
                 <!-- Footer Start -->
                  <footer class="footer">
     <div class="container-fluid">
