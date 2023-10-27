@@ -28,6 +28,6 @@ class PatientController extends Controller
         $patient->age = $request->age;
         $patient->save(); 
 
-        // return redirect()->route('page-de-confirmation');
+        return redirect()->route('patientViewAdmin');
     }
 }

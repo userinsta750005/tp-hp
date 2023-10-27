@@ -186,7 +186,7 @@
                                         <a href="{{ URL::to('/patient/patientAddAdmin') }}">Register Patient</a>
                                     </li>
                                     <li>
-                                        <a href="viewpatients.html">View Patients</a>
+                                        <a href="{{ URL::to('/patient/patientViewAdmin') }}">View Patients</a>
                                     </li>
                                     <li>
                                         <a href="managepatient.html">Manage Patients</a>

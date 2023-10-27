@@ -4,9 +4,9 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\User;
+use App\Models\Patient;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
-
 
 
 class AdminPagesController extends Controller
@@ -26,6 +26,12 @@ class AdminPagesController extends Controller
     
     public function patientAdd(){
         return view('admin.patient.addPatient');
+    }
+
+    public function patientView(){
+        $patients = Patient::paginate(5);
+
+        return view('admin.patient.viewPatient', ['patients' => $patients]);
     }
 
     //fonction connexion page admin
