@@ -30,4 +30,17 @@ class PatientController extends Controller
 
         return redirect()->route('patientViewAdmin');
     }
+
+    public function delete($id)
+    {
+        $patient = Patient::find($id);
+
+        if (!$patient) {
+            return redirect()->route('patientViewAdmin')->with('error', 'Patient non trouvé.');
+        }
+
+        $patient->delete();
+
+        return redirect()->route('patientViewAdmin')->with('success', 'Le patient a été supprimé avec succès.');
+    }
 }

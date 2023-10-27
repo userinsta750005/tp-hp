@@ -575,8 +575,10 @@ nav.flex.items-center.justify-between {
                                                     <td>{{ $patient->adresse }}</td>
                                                     <td>{{ $patient->ailment }}</td>
                                                     <td>
-                                                        {{-- <a href="{{ route('view-patient', ['id' => $patient->id]) }}" class="badge badge-success"><i class="mdi mdi-eye"></i> View</a>
-                                                        <a href="{{ route('add-patient-theatre', ['id' => $patient->id]) }}" class="badge badge-primary"><i class="mdi mdi-check-box-outline"></i> Add Patient</a> --}}
+                                                        <a href="{{ route('delete-patient', ['id' => $patient->id]) }}" class="badge badge-success">
+                                                            <i class="mdi mdi-eye"></i> Supprimer</a>
+                                                        {{-- <a href="{{ route('add-patient-theatre', ['id' => $patient->id]) }}" class="badge badge-primary">
+                                                            <i class="mdi mdi-check-box-outline"></i> Add Patient</a> --}}
                                                     </td>
                                                 </tr>
                                                 @endforeach
