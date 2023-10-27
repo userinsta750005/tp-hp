@@ -1,36 +1,70 @@
 <!DOCTYPE html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta name="csrf-token" content="{{ csrf_token() }}">
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>Hospital Management System - A Super Responsive Information System</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta content="A fully featured admin theme which can be used to build CRM, CMS, etc." name="description" />
+    <meta content="MartDevelopers" name="author" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <!-- App favicon -->
+    <link rel="shortcut icon" href="{{ asset('admin/assets/images/favicon.ico') }}">
 
-        <title>{{ config('app.name', 'Laravel') }}</title>
+    <!-- Plugins css -->
+    <link href="{{ asset('admin/assets/libs/flatpickr/flatpickr.min.css') }}" rel="stylesheet" type="text/css" />
 
-        <!-- Fonts -->
-        <link rel="preconnect" href="https://fonts.bunny.net">
-        <link href="https://fonts.bunny.net/css?family=figtree:400,500,600&display=swap" rel="stylesheet" />
+    <!-- App css -->
+    <link href="{{ asset('admin/assets/css/bootstrap.min.css') }}" rel="stylesheet" type="text/css" />
+    <link href="{{ asset('admin/assets/css/icons.min.css') }}" rel="stylesheet" type="text/css" />
+    <link href="{{ asset('admin/assets/css/app.min.css') }}" rel="stylesheet" type="text/css" />
+    <!-- Loading button css -->
+    <link href="{{ asset('admin/assets/libs/ladda/ladda-themeless.min.css') }}" rel="stylesheet" type="text/css" />
 
-        <!-- Scripts -->
-        @vite(['resources/css/app.css', 'resources/js/app.js'])
-    </head>
-    <body class="font-sans antialiased">
-        <div class="min-h-screen bg-gray-100">
-            @include('layouts.navigation')
+    <!-- Footable css -->
+    <link href="{{ asset('admin/assets/libs/footable/footable.core.min.css') }}" rel="stylesheet" type="text/css" />
+</head>
+<body>
+    <div id="wrapper">
+        <!-- Topbar Start -->
+        @include('layouts.topbar') 
+        <!-- end Topbar -->
 
-            <!-- Page Heading -->
-            @if (isset($header))
-                <header class="bg-white shadow">
-                    <div class="max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8">
-                        {{ $header }}
-                    </div>
-                </header>
-            @endif
+        <!-- Left Sidebar Start -->
+        @include('layouts.leftsidebar')
+        <!-- Left Sidebar End -->
 
-            <!-- Page Content -->
-            <main>
-                {{ $slot }}
-            </main>
+        <!-- Right Sidebar -->
+        @include('layouts.rightbar')
+        <!-- End Right Sidebar -->
+
+        <!-- Page Content -->
+        <div class="content-page">
+            <div class="content">
+                <div class="container-fluid">
+                    @yield('content')
+                </div>
+            </div>
         </div>
-    </body>
+        <!-- End Page Content -->
+    </div>
+    <!-- App scripts -->
+    <!-- Vendor js -->
+    <script src="{{ asset('admin/assets/js/vendor.min.js') }}"></script>
+
+    <!-- Plugins js-->
+    <script src="{{ asset('admin/assets/libs/flatpickr/flatpickr.min.js') }}"></script>
+    <script src="{{ asset('admin/assets/libs/jquery-knob/jquery.knob.min.js') }}"></script>
+    <script src="{{ asset('admin/assets/libs/jquery-sparkline/jquery.sparkline.min.js') }}"></script>
+    <script src="{{ asset('admin/assets/libs/flot-charts/jquery.flot.js') }}"></script>
+    <script src="{{ asset('admin/assets/libs/flot-charts/jquery.flot.time.js') }}"></script>
+    <script src="{{ asset('admin/assets/libs/flot-charts/jquery.flot.tooltip.min.js') }}"></script>
+    <script src="{{ asset('admin/assets/libs/flot-charts/jquery.flot.selection.js') }}"></script>
+    <script src="{{ asset('admin/assets/libs/flot-charts/jquery.flot.crosshair.js') }}"></script>
+
+    <!-- Dashboard 1 init js-->
+    <script src="{{ asset('admin/assets/js/pages/dashboard-1.init.js') }}"></script>
+
+    <!-- App js-->
+    <script src="{{ asset('admin/assets/js/app.min.js') }}"></script>
+</body>
 </html>
