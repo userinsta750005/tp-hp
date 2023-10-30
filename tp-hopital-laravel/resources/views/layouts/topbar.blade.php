@@ -38,7 +38,7 @@
         
                 <!-- LOGO -->
                 <div class="logo-box">
-                    <a href="dashboard.html" class="logo text-center">
+                    <a href="{{ URL::to('/dashboardAdmin') }}" class="logo text-center">
                         <span class="logo-lg">
                             <img src="{{asset('admin/assets/images/logo-light.png')}}" alt="" height="18">
                         </span>
